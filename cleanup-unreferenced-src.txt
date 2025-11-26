@@ -1,0 +1,4 @@
+﻿D:\All projects\react(Vite) Projects\portfolio\Potfolio\src\App.tsx
+D:\All projects\react(Vite) Projects\portfolio\Potfolio\src\assets.d.ts
+D:\All projects\react(Vite) Projects\portfolio\Potfolio\src\index.css
+D:\All projects\react(Vite) Projects\portfolio\Potfolio\src\main.tsx

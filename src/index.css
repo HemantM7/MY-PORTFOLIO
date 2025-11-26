@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+.container-pad {
+	@apply max-w-6xl mx-auto px-4;
+}
+
+.section-title {
+	@apply text-3xl md:text-4xl font-bold mb-6 text-center;
+}
+
+.card-base {
+	@apply bg-white rounded-2xl shadow-card p-6 transition-transform hover:-translate-y-1;
+}
+
+
