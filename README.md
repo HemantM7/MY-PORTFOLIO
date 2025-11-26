@@ -51,17 +51,27 @@ npm run preview
 ### Tailwind
 Tailwind is already configured. Global utility helpers are in `src/index.css` (e.g., `container-pad`, `section-title`, `card-base`). Theme accents are defined in `tailwind.config.js` under `colors.accent`.
 
-### EmailJS (Contact Form)
-Replace placeholders in `src/App.tsx` with your EmailJS credentials:
-```ts
-emailjs.send(
-  'YOUR_SERVICE_ID',
-  'YOUR_TEMPLATE_ID',
-  { from_name, from_email, message },
-  'YOUR_PUBLIC_KEY'
-)
-```
-Create a template on EmailJS, then copy your Service ID, Template ID, and Public Key into the code. Alternatively, swap EmailJS for Formspree and update the form submit handler.
+### Contact Form (Nodemailer + Vercel Serverless)
+The contact form uses a Vercel serverless function with Nodemailer to send emails via Gmail.
+
+**Setup for Vercel Deployment:**
+
+1. **Generate Gmail App Password:**
+   - Go to https://myaccount.google.com/apppasswords
+   - Create a new app password for "Mail"
+   - Copy the 16-character password
+
+2. **Add Environment Variables in Vercel:**
+   - Go to your Vercel project settings
+   - Navigate to "Environment Variables"
+   - Add these variables:
+     - `GMAIL_USER` = your-email@gmail.com
+     - `GMAIL_PASS` = your-16-char-app-password
+   - Make sure to add them for Production, Preview, and Development
+
+3. **Redeploy:**
+   - After adding environment variables, redeploy your project
+   - The contact form will now work!
 
 ### Personalization
 - Update your name in Loader, Home headline, and Footer (`src/App.tsx`).
