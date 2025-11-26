@@ -26,8 +26,11 @@ Your portfolio needs **TWO separate Vercel projects**:
 1. In the backend project, go to **Settings** → **Environment Variables**
 2. Add these:
    - `GMAIL_USER` = `hemantmistri00@gmail.com`
-   - `GMAIL_PASS` = `your-gmail-app-password` (get from https://myaccount.google.com/apppasswords)
+   - `GMAIL_PASS` = `abcd efgh ijkl mnop` (your 16-char password from https://myaccount.google.com/apppasswords)
    - `NODE_ENV` = `production`
+   
+   ⚠️ **Important**: For `GMAIL_PASS`, use ONLY the 16-character password (like `abcd efgh ijkl mnop`), not any link or text!
+
 3. **Redeploy** the backend project
 
 ### 3️⃣ Deploy Frontend

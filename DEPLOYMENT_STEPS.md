@@ -52,11 +52,13 @@ Your portfolio has **2 parts** that need to be deployed separately:
 1. Go to backend project → **Settings** → **Environment Variables**
 2. Add these 3 variables:
 
-   | Name | Value |
-   |------|-------|
-   | `GMAIL_USER` | `hemantmistri00@gmail.com` |
-   | `GMAIL_PASS` | Get from [Google App Passwords](https://myaccount.google.com/apppasswords) |
-   | `NODE_ENV` | `production` |
+   | Name | Value | Example |
+   |------|-------|---------|
+   | `GMAIL_USER` | Your Gmail address | `hemantmistri00@gmail.com` |
+   | `GMAIL_PASS` | 16-character app password (see below ⬇️) | `abcd efgh ijkl mnop` |
+   | `NODE_ENV` | `production` | `production` |
+
+   ⚠️ **For `GMAIL_PASS`**: Use ONLY the 16-character password you get from [Google App Passwords](https://myaccount.google.com/apppasswords), not the link text!
 
 3. Click **Deployments** → **Redeploy**
 
@@ -105,8 +107,14 @@ Your portfolio has **2 parts** that need to be deployed separately:
    - App: **Mail**
    - Device: **Other** → Type "Portfolio"
 5. Click **Generate**
-6. Copy the 16-character password (e.g., `abcd efgh ijkl mnop`)
-7. Use this as `GMAIL_PASS` in Step 2
+6. **Copy ONLY the 16-character password** shown in the yellow box
+   - Example: `abcd efgh ijkl mnop`
+   - It will have spaces, you can keep them or remove them
+7. Paste this password as the value for `GMAIL_PASS` in Step 2
+
+**Important:** 
+- ✅ Use: `abcd efgh ijkl mnop` (the actual password)
+- ❌ Don't use: The link text or any other text
 
 ---
 
