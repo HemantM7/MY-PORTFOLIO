@@ -553,7 +553,7 @@ function Projects() {
 		// Projects extracted from CV (links left blank for you to fill)
 		{
 			title: 'Interactive Receipt Management System',
-			image: '/dist/RMS.png',
+			image: '/RMS.png',
 			desc: 'Single-page app for receipt data entry and management using React (Vite), TypeScript, Tailwind and MUI. Features inline editable grids and perform CRUD operations on the Reciepts, auto-generated IDs and local-storage persistence with print the pdf of all the data and download in excel sheet. Also display all the data of the recipts in the form of graphs on the dashboard.',
 			stack: ['React 18', 'TypeScript', 'Tailwind', 'MUI', 'Next.js'],
 			githubLink: 'https://github.com/HemantM7/Reciept-management-system',
@@ -561,7 +561,7 @@ function Projects() {
 		},
 		{
 			title: 'Portfoio Website',
-			image: '/dist/portfolio.png',
+			image: '/portfolio.png',
 			desc: 'Modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features smooth scroll navigation, animated sections with Framer Motion and AOS, interactive project cards with hover effects, and a contact form with email integration. Showcases skills, projects, and services with a clean, professional design and engaging user experience.',
 			stack: ['React', 'TypeScript', 'TailwindCSS', 'Framer Motion', 'AOS'],
 			githubLink: 'https://github.com/yourusername/portfolio',
@@ -569,7 +569,7 @@ function Projects() {
 		},
 		{ 
 			title: 'Solo Leveling-Arise', 
-			image: '/dist/arise.png', 
+			image: '/arise.png', 
 			desc: 'A modern sci-fi landing page for "Solo Leveling: Arise" with 3D animations, glassmorphic UI, and responsive design. Built with React, Three.js, and Tailwind CSS; deployed to GitHub Pages.', 
 			stack: ['React 18', 'Tailwind CSS', 'Vite', 'Framer Motion', 'Three.js'],
 			githubLink: 'https://github.com/yourusername/ecommerce',
@@ -577,7 +577,7 @@ function Projects() {
 		},
 		{ 
 			title: 'TO-DO-List', 
-			image: '/dist/To_do_list.png',
+			image: '/To_do_list.png',
 			desc: 'A simple TO Do List app for making list of the items. it is create using HTML5 CSS and JavaScript. It have feature to add delete and mark done to the items.', 
 			stack: ['HTML', 'CSS', 'JavaScript'],
 			githubLink: 'https://github.com/HemantM7/To-Do-List',
@@ -585,7 +585,7 @@ function Projects() {
 		},
 		{ 
 			title: 'Gallerie Website', 
-			image: '/dist/Gallerie.png', 
+			image: '/Gallerie.png', 
 			desc: 'Gallerie is a clean and minimal photo-search web app built with a focus on simplicity and smooth user experience. It offers a responsive, visually appealing interface for browsing curated image collections.', 
 			stack: ['HTML', 'Bootstrap', 'JavaScript', 'Unsplash API'],
 			githubLink: 'https://github.com/HemantM7/photo-album-',
