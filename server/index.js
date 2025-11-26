@@ -4,7 +4,27 @@ const cors = require('cors')
 const nodemailer = require('nodemailer')
 
 const app = express()
-app.use(cors())
+
+// Configure CORS to allow requests from your frontend
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:4173',
+  'https://hemant-mistri.vercel.app',
+  'https://your-portfolio-domain.vercel.app' // Replace with your actual domain
+]
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true)
+    if (allowedOrigins.indexOf(origin) === -1) {
+      return callback(new Error('CORS policy violation'), false)
+    }
+    return callback(null, true)
+  },
+  credentials: true
+}))
+
 app.use(express.json())
 
 const PORT = process.env.PORT || 4000
@@ -61,4 +81,15 @@ app.post('/api/contact', async (req, res) => {
   }
 })
 
-app.listen(PORT, () => console.log(`Server listening on ${PORT}`))
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', message: 'Server is running' })
+})
+
+// For Vercel serverless, export the app
+// For local development, start the server
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => console.log(`Server listening on ${PORT}`))
+}
+
+module.exports = app

@@ -359,7 +359,7 @@ function Home() {
 	return (
 		<section className="container-pad min-h-[calc(100vh-64px)] py-6 md:py-0 pt-14 md:pt-0 grid md:grid-cols-2 gap-10 items-center">
 			<div>
-				<p className='bg-gray-300 rounded-2xl px-3 mb-7 inline-block'>Avalable for freelance work.</p>
+				<p className='bg-gray-300 rounded-2xl px-3 mb-7 inline-block'>Available for freelance work.</p>
 				<motion.h1 data-aos="fade-up" className="text-5xl font-semibold mb-4">
 					Hi, I'm Hemant Mistri.
 				</motion.h1>
@@ -710,7 +710,9 @@ function Contact() {
 
 		try {
 			setSending(true)
-			const response = await fetch('/api/contact', {
+			// Use environment variable for API URL, fallback to relative path
+			const apiUrl = import.meta.env.VITE_API_URL || ''
+			const response = await fetch(`${apiUrl}/api/contact`, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ name, email, message }),

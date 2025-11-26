@@ -1,6 +1,11 @@
 # 📧 Contact Form Setup Guide for Vercel
 
-Your portfolio contact form is now configured to work with Vercel serverless functions!
+Your portfolio uses a separate backend server for the contact form. This guide shows you how to deploy both the frontend and backend.
+
+## 📦 Deployment Architecture
+
+- **Frontend**: React app deployed on Vercel (main portfolio)
+- **Backend**: Express server deployed separately on Vercel (handles emails)
 
 ## 🔐 Step 1: Generate Gmail App Password
 
@@ -12,7 +17,27 @@ Your portfolio contact form is now configured to work with Vercel serverless fun
 6. Click **Generate**
 7. **Copy the 16-character password** (you won't see it again!)
 
-## ⚙️ Step 2: Add Environment Variables in Vercel
+## 🚀 Step 2: Deploy Backend Server
+
+1. **Create a new Vercel project for the backend:**
+   - Go to https://vercel.com/new
+   - Click "Add New" → "Project"
+   - Import your GitHub repository (MY-PORTFOLIO)
+   - **Important**: Set Root Directory to `server`
+   - Project Name: `portfolio-backend` (or any name you like)
+   - Click "Deploy"
+
+2. **Copy the backend URL:**
+   - After deployment, copy the URL (e.g., `https://portfolio-backend.vercel.app`)
+   - You'll need this for the frontend
+
+## ⚙️ Step 3: Add Environment Variables
+
+### For Backend (portfolio-backend project):
+
+1. Go to your backend project in Vercel
+2. Click **Settings** → **Environment Variables**
+3. Add these variables:
 
 1. Go to your Vercel dashboard: https://vercel.com/dashboard
 2. Select your portfolio project
@@ -31,7 +56,20 @@ Your portfolio contact form is now configured to work with Vercel serverless fun
 
 5. Click **Save** for each variable
 
-## 🚀 Step 3: Redeploy
+### For Frontend (main portfolio project):
+
+1. Go to your main portfolio project in Vercel
+2. Click **Settings** → **Environment Variables**
+3. Add this variable:
+
+   **Variable:**
+   - Name: `VITE_API_URL`
+   - Value: `https://portfolio-backend.vercel.app` (your backend URL from Step 2)
+   - Environment: ✅ Production, ✅ Preview, ✅ Development
+
+4. Click **Save**
+
+## 🚀 Step 4: Redeploy Both Projects
 
 After adding environment variables, you need to redeploy:
 
@@ -45,7 +83,7 @@ After adding environment variables, you need to redeploy:
 - Click the three dots (...) on the latest deployment
 - Click **Redeploy**
 
-## ✅ Step 4: Test Your Contact Form
+## ✅ Step 5: Test Your Contact Form
 
 1. Visit your deployed portfolio
 2. Go to the Contact section
