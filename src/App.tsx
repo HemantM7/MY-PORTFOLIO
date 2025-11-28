@@ -356,6 +356,14 @@ function Home() {
 		// window.open('https://your-cv-url.com/cv.pdf', '_blank')
 	}
 
+	const handleHireMe = () => {
+		scroller.scrollTo('contact', {
+			smooth: true,
+			duration: 500,
+			offset: -80
+		})
+	}
+
 	return (
 		<section className="container-pad min-h-[calc(100vh-64px)] py-6 md:py-0 pt-14 md:pt-0 grid md:grid-cols-2 gap-10 items-center">
 			<div>
@@ -385,7 +393,13 @@ function Home() {
 					</p>
 				</div>
 				<div className="flex gap-3 mb-6" data-aos="fade-up" data-aos-delay="300">
-					<Button variant="contained" sx={{ backgroundColor: 'black', color: 'white', '&:hover': { backgroundColor: 'white', color: 'black', border: '1px solid black' } }}>Hire Me</Button>
+					<Button 
+						variant="contained" 
+						onClick={handleHireMe}
+						sx={{ backgroundColor: 'black', color: 'white', '&:hover': { backgroundColor: 'white', color: 'black', border: '1px solid black' } }}
+					>
+						Hire Me
+					</Button>
 					<Button
 						variant="outlined"
 						sx={{ borderColor: 'black', color: 'black', '&:hover': { backgroundColor: 'black', color: 'white', borderColor: 'black' } }}
