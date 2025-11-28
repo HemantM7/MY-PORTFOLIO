@@ -121,7 +121,7 @@ Your portfolio has **2 parts** that need to be deployed separately:
 ## 🐛 Quick Troubleshooting
 
 ### Backend Health Check
-Visit: `https://your-backend-url.vercel.app/api/health`
+Visit: `https://portfolio-backend-one-pi.vercel.app/`
 
 Should return:
 ```json

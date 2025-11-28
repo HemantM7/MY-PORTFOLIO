@@ -564,8 +564,8 @@ function Projects() {
 			image: '/portfolio.png',
 			desc: 'Modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features smooth scroll navigation, animated sections with Framer Motion and AOS, interactive project cards with hover effects, and a contact form with email integration. Showcases skills, projects, and services with a clean, professional design and engaging user experience.',
 			stack: ['React', 'TypeScript', 'TailwindCSS', 'Framer Motion', 'AOS'],
-			githubLink: 'https://github.com/yourusername/portfolio',
-			liveLink: 'https://your-portfolio.com'
+			githubLink: 'https://github.com/HemantM7/MY-PORTFOLIO',
+			liveLink: 'https://my-portfolio-taupe-five-86.vercel.app/'
 		},
 		{ 
 			title: 'Solo Leveling-Arise', 
