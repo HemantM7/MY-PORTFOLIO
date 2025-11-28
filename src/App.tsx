@@ -572,7 +572,7 @@ function Projects() {
 			image: '/arise.png', 
 			desc: 'A modern sci-fi landing page for "Solo Leveling: Arise" with 3D animations, glassmorphic UI, and responsive design. Built with React, Three.js, and Tailwind CSS; deployed to GitHub Pages.', 
 			stack: ['React 18', 'Tailwind CSS', 'Vite', 'Framer Motion', 'Three.js'],
-			githubLink: 'https://github.com/yourusername/ecommerce',
+			githubLink: 'https://github.com/HemantM7/Arise-Landing-page',
 			liveLink: 'https://arise-landing-page.vercel.app/'
 		},
 		{ 
@@ -589,7 +589,7 @@ function Projects() {
 			desc: 'Gallerie is a clean and minimal photo-search web app built with a focus on simplicity and smooth user experience. It offers a responsive, visually appealing interface for browsing curated image collections.', 
 			stack: ['HTML', 'Bootstrap', 'JavaScript', 'Unsplash API'],
 			githubLink: 'https://github.com/HemantM7/photo-album-',
-			liveLink: 'https://your-blog.vercel.app'
+			liveLink: 'https://photo-album-seven-tau.vercel.app/'
 		},
 		{ 
 			title: 'Farmer Forge-Website',
